@@ -1,0 +1,782 @@
+:root{
+
+  --menu-btn-color: rgb(99, 170, 177);
+  --second-color: rgb(129, 127, 127);
+
+
+/* 
+  --first-color: rgb(177, 173, 173); */
+
+
+   --link-color: aquamarine;
+  
+   --black-play: black;
+  
+   --bg-color: rgb(79, 89, 112);
+   --tapa-album-color: rgb(253, 49, 35);
+   --black-suave: rgb(19, 19, 19);
+
+}
+
+
+
+
+  *,*::after, *::before {
+    box-sizing: inherit;
+}
+
+
+
+body{
+margin: 0%;
+padding: 0%;
+background-color: var(--black-suave);
+/* background-image: url("../assets/hambre-fondo.jpg");
+background-repeat: repeat-y; */
+
+}
+
+
+
+
+
+
+
+
+/* 
+
+
+  @font-face {
+ 
+    font-family: "fuente-mia";
+    src: url("../assets/Fuente_mia_ultima-Regular.ttf");
+  }  */
+
+.font-size{
+  font-size: 0.15px;
+}
+
+  html{
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    
+    font-size: 16px;
+    font-family: "fuente-mia";
+   
+    font-weight: bold;
+   
+}
+
+
+
+
+h1{
+  font-size: 2.5rem;
+}
+
+
+h2{
+  font-size: 2.25rem;
+}
+
+
+h3{
+  font-size: 2rem;
+}
+
+
+h4{
+  font-size: 1.75rem;
+}
+
+
+h5{
+  font-size: 1.5rem;
+}
+
+
+h6{
+  font-size: 1.25rem;
+}
+
+
+
+
+
+    /* ********** Menu ********** */
+    .menu-btn {
+     
+      border: 0;
+      cursor: pointer;
+      background-color: rgb(21, 21, 21, 0);
+      margin-left: 85%;
+      margin-top: -10px;
+      
+    }
+    
+    .menu-btn svg {
+      fill: rgb(98, 98, 98);
+        
+    }
+    
+    .menu {
+      position: fixed;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      background-color: rgba(5, 5, 5, 0.75);
+      
+      opacity: 0;  
+      pointer-events: none;
+      transition: opacity 0.8s ease;
+      z-index: -1;
+    }
+    
+    .menu.is-active {
+      opacity: 1;
+      pointer-events: auto;
+    }
+    
+    .menu a {
+      padding: 1rem;
+      font-size: 1.5rem;
+      font-weight: 100;
+      text-align: center;
+      text-decoration: none;
+      color: rgb(98, 98, 98);
+    }
+    
+    /* .menu a:hover {
+      color: rgb(98, 98, 98);
+   
+      font-size: 1.5rem;
+    } */
+
+    .none {
+      display: none;
+    } 
+    
+    
+    /*  @media screen and (min-width: 1024px) {
+      
+      
+      
+      .menu-btn {
+        display: none;
+      }
+    
+      .menu {
+        position: sticky;
+        width: auto;
+        flex-direction: row;
+        opacity: 1;
+        pointer-events: auto;
+        top: 0;
+        left: 75%;
+        padding-top: 5px;
+        z-index: 0; 
+      }
+    
+      .menu a {
+          font-size: 1.2rem;
+        padding: 0 0.4rem;
+        color: var(--first-color);
+        
+      }
+    
+      .menu a:last-child { 
+        padding-right: 0;
+        margin-right: 1rem;
+      }
+    
+      .menu a:hover {
+        background-color: transparent;
+        font-size: 1.2rem;
+        
+      }
+    } */
+    
+
+/*      
+@keyframes humo-h1{
+0%{
+  transform: translateX(300px);
+}
+50%{
+  transform: translateX(-30px);
+}
+100%{
+  transform: translateX(300px);
+}
+}
+.humo-h1{
+width: 5px;
+height: 1px;
+top: 400px;
+background-color: rgb(193, 195, 196);
+box-shadow: 0 0 7rem 7rem rgb(193, 195, 196);
+position: sticky;
+z-index: -1;
+animation: humo-h1 20s linear infinite;
+}*/
+
+
+
+
+
+
+
+  /*COMPARTIR EN R.R.S.S.*/
+
+  .compartir{
+    position: fixed;
+    bottom: 10px;
+    left: 2px;
+    
+   /*  position: relative; */
+    z-index: 995;
+      width: 30%;
+      height: 50px;
+ 
+  
+    color: var(--second-color);
+    
+      margin-left: 25px;
+    margin-top: 10px;
+    padding-top: 1px;
+    padding-bottom: 3px;
+      text-align: left;
+   
+    }
+    
+    .compartir h4{
+    margin-top: -2px;
+    margin-left: 14px;
+   
+    padding-left: 10px;
+    color: var(--menu-btn-color);
+    font-weight: 100;
+    font-size: 16px;
+   
+    }
+
+
+
+    .compartir svg{
+    width: 20px;
+    height: 20px;
+    fill: var(--menu-btn-color);
+    margin-right: 25px;
+    
+    }
+
+  .redes{
+   /*  position: relative; */
+    /* margin-top: -3px; */
+  
+    display: inline-block;
+    
+    width: auto;
+    height: 20px;
+    
+    font-size: 14px;
+   
+    text-align: center;
+    
+    /* top: -15px; */
+    color: var(--first-color);
+  
+    text-decoration: none;
+    font-weight: 100;
+    margin-right: -12px;
+    transition: color 0.3s ease-in;
+    
+  }
+  
+
+.contenedor-redes{
+  position: fixed; 
+ /*  position: absolute; */
+  display: flex;
+  padding-top: 6px;
+  width: 110px;
+  bottom: 13px;
+  left: 10%; 
+  height: 30px;
+  position: relative;
+  z-index: 995;
+}
+
+
+
+  .redes:hover{
+      color: red;
+  }
+
+
+
+  @media screen and (min-width: 430px){
+   
+  
+
+    
+.menu-btn{
+  margin-left: 98%;
+}
+
+    .compartir{
+      left: 10%;
+
+    }
+
+
+.font-size{
+  font-size: 0.2px;
+}
+
+
+
+.contenedor-redes{
+
+  left: 12%;
+  
+
+}
+
+  }
+
+
+
+    /*---------VERSIÓN TABLET / DESKTOP--------------*/
+
+  @media screen and (min-width: 768px){
+  
+.menu-btn{
+  margin-left: 80%;
+}
+
+    .compartir{
+      left: 11.5%;
+    }
+
+
+.compartir h4{
+  font-size: 18px;
+  margin-left: 2px;
+}
+
+.redes{
+  font-size: 13px;
+}
+
+
+
+
+
+
+.position-central{
+    position: relative;
+    width: 340px;
+    height: 340px;
+    left: 0%;
+    top: -86px;
+}
+
+.inf2-position-central{
+    position: absolute;
+    width: 340px;
+    height: 340px;
+    top: 86px;
+}
+
+
+
+.font-size{
+  font-size: 0.25px;
+}
+
+
+
+
+
+
+  }
+
+
+
+
+
+  @media screen and (min-width: 1024px){
+  
+    .compartir{
+      left: 11.5%;
+      width: 20%;
+    }
+   
+.compartir h4{
+  
+  margin-left: 2px;
+}
+
+.menu-btn{
+  margin-left: 88%;
+}
+
+
+  }
+
+
+
+  .no-activo { 
+    pointer-events: none; 
+    cursor: default; 
+  }
+   
+
+
+
+
+
+.cancion-container{
+  width: 100vw;
+  height: 100vw;
+  background-color: rgb(238, 78, 78);
+  box-shadow: 0rem 0rem 5rem 5rem white;
+  
+
+}
+
+.canciones{
+  
+  text-align: center;
+  font-size: 2.5rem;
+}
+
+
+
+.video-container{
+  
+  position: relative;
+  max-width: 100%;
+  height: 0;
+  padding-bottom: 56.25%;
+
+  transition: -webkit-filter 1.5s linear;
+
+  transition: filter 1.5s linear;
+
+  transition: filter 1.5s linear, -webkit-filter 1.5s linear;
+  top: 25%;
+  z-index: 0;
+  
+}
+
+
+.video-container>*{
+ position: absolute;
+ width: 100%;      
+ height: 100%;
+ 
+ 
+ 
+ z-index: 1;
+ }
+
+
+
+
+.letra h2{
+  text-align: center;
+}
+
+.letra p{
+  
+  margin-left: auto;
+  margin-right: auto;
+  
+  text-align: center;
+ 
+}
+
+/*FOOTER*/
+
+
+.footer {
+    /*margin-bottom: var(--header-height); /*para que se vea en mobile y no 
+    lo tape el header */
+    padding-top: 15px;
+    text-align: center;
+   
+ z-index: 100;
+ position: relative;
+    height: 100px;
+   /*  background: linear-gradient(0deg, black 0, rgb(47, 47, 47)100%);
+ */
+  background-color: black;
+    
+  }
+  
+  footer a{
+    
+    color: rgb(92, 90, 101);
+    text-decoration: none;
+    font-size: 16px;
+  }
+  
+
+  
+
+/*HEADER*/
+
+
+.header {
+    position: fixed;
+    left: 10%;
+    bottom: 0;
+    z-index: 990;
+  
+    width: 80%;
+    height: 40px;
+    
+  }
+  
+  .header > .container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    
+  }
+  
+
+
+
+
+
+
+  /*Media query versión desktop*/
+
+  @media screen and (min-width: 1024px) {
+
+    
+  
+    .footer {
+      margin-bottom: 0; /*que el footer quede abajo de nuevo, ya que en
+      desktop no está el header abajo*/
+      width: 100%;
+    }
+
+   
+  /* 
+    .header {
+      position: sticky; 
+      top: 0;
+      
+      padding: 0.5rem;
+      height: calc(var(--header-height) - 0.2rem);
+    }
+ */
+    .menu {
+        background-color: rgb(211, 22, 22, 0);
+        background-color: rgba(5, 5, 5, 0.75);
+    }
+
+
+  
+  }
+
+  
+
+/*CONTACTO*/
+
+   
+
+  .contact-card {
+    margin: 3rem auto;
+   
+    padding: 1rem;
+    width: 100%;
+    height: auto;/*según el caso*/
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;/*reparte el
+    espacio sobrante considerando las orillas*/
+    align-items: center;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .contact-card > svg{
+    
+    width: 30px;
+    height: 30px;
+  }
+
+  
+  .contact-card > small {
+    margin-top: -1rem;
+    font-size: 20px;
+    margin-bottom: 2rem;
+    
+  }
+  .contact-card > small a{
+    color: rgb(49, 49, 49);
+    text-decoration: none;
+    text-align: center;
+    transition: color 0.3s ease-in;
+    
+    
+  }
+  
+.contact-card small a:hover{
+  color: rgb(123, 255, 255);
+
+}
+
+
+.social-media{
+
+display: flex;
+  flex-direction: column;
+}
+
+.social-media > a{
+  margin: 10px 0;
+ 
+ 
+ 
+}
+
+
+.contact{ 
+   margin-top: 150px;
+   margin-bottom: -50px;
+   background-color: black;
+  /*  background: linear-gradient(180deg, black 0, rgb(78, 77, 77) 100%); */
+  box-shadow: 0 -30px 3.5rem 2rem black, inset 0 0 1rem 2rem black;
+  border: none;
+ }
+
+ 
+  .contact-card h2, h3, .contact-form h3, .contact-form{
+    font-size: 1.5rem; 
+    font-weight: 100;
+    color: var(--menu-btn-color);
+ 
+  }
+  
+
+  .contact-card h2{
+   
+    font-size: 3rem;
+    
+  }
+  
+.contact-card .email a{
+  
+    font-family: Courier, monospace;
+    font-size: 1rem;
+    color: var(--second-color);
+    
+  }
+
+  .contact-card .email div{
+    
+    font-family: Courier, monospace;
+    font-size: 1rem;
+    color: var(--second-color);
+    
+  }
+
+
+.contact-card .social-media a{
+    color: var(--second-color);
+    font-size: 2rem;
+    /* transform: perspective(1000px) rotateX(40deg); */
+  }
+
+
+/*----------------------------------*/
+
+
+
+
+.enlace-a-home{
+  width: auto;
+  height: auto;
+
+  text-align: center;
+  padding-top: 10px;
+  margin-left: 10%;
+  margin-top: 25px;
+  
+ 
+}
+
+.enlace-a-home a{
+  text-decoration: none;
+  font-size: 1.5rem;
+  color: aliceblue;
+}
+
+
+@media screen and (min-width: 430px) {
+
+   
+
+    
+  .enlace-a-home{
+   
+    margin-left: 11%;
+    
+   
+  }
+    
+    }
+  
+
+@media screen and (min-width: 768px) {
+
+   
+
+    
+  .enlace-a-home{
+   
+    margin-left: 12%;
+    
+   
+  }
+    
+    }
+  
+
+
+
+
+  /*Media query versión desktop*/
+
+  @media screen and (min-width: 1024px) {
+
+   
+
+    
+.enlace-a-home{
+ 
+  margin-left: 7%;
+  
+ 
+}
+  
+  }
+
+
+/*-----------------------------------*/
+
+
+
+
+.running{
+  -webkit-animation-play-state: running;
+          animation-play-state: running;
+}
