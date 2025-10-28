@@ -12,6 +12,14 @@
     });
   
   
+  document.addEventListener("DOMContentLoaded", function () {
+    const elementos = document.querySelectorAll("img, video");
+    elementos.forEach(el => {
+      el.addEventListener("contextmenu", e => e.preventDefault());
+    });
+  });
+
+
   
   /*  PARA QUE SE REPLIEGUE EL MENÚ AL TOCAR EN CUALQUIER PARTE AFUERA DEL MISMO
   esconder el menu cuando ya se seleccionó una sección
@@ -314,4 +322,5 @@ addElemento(texto);
 
  
  });
+
  
